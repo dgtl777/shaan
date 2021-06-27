@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 19</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(-45deg, blue, black);
+            text-align: center;
+        }
+
+        h1 {
+            color: whitesmoke;
+            text-shadow: 0px 2px 4px black;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            opacity: .1;
+        }
+
+        img:active {
+            transform: scale(1.2) rotate(45deg) translateY(200px);
+            opacity: 1;
+        }
+
+        img:hover {
+            opacity: 1;
+            box-shadow: 0px 0px 30px yellow;
+        }
+
+        .box {
+            width: 600px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            background-color: black;
+            border: 20px double yellow;
+            box-shadow: 0px 0px 40px yellow;
+        }
+
+        .first {
+            width: 600px;
+            height: 200px;
+            display: flex;
+        }
+
+        .second {
+            width: 600px;
+            height: 200px;
+            flex: 1;
+            display: flex;
+        }
+
+        #pokemon:active {
+            font-size: 84px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Opacity</h1>
+    </header>
+    <div class="box">
+        <div class="first">
+            <img src="https://i.ytimg.com/vi/abe7iRiZkpY/maxresdefault.jpg" alt="">
+            <img src="https://static.wikia.nocookie.net/pokemon-and-digimon/images/6/63/Ash_Charmander.png/revision/latest?cb=20160113223827"
+                alt="">
+        </div>
+        <div class="second">
+            <img src="https://static.wikia.nocookie.net/pokemon/images/4/49/Ash_Pikachu.png/revision/latest?cb=20200405125039"
+                alt="">
+            <img src="https://static.wikia.nocookie.net/leonhartimvu/images/8/8c/Tierno_Squirtle.png/revision/latest?cb=20190128082527"
+                alt="">
+        </div>
+    </div>
+    <h1 id="pokemon">PoKemon and Friends</h1>
+
+</body>
+
+</html>
