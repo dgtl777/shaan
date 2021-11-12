@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 39</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image:
+                linear-gradient(yellow, purple);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: purple;
+        }
+
+        img {
+            width: 300px;
+            border: 10px solid white;
+            display: none;
+        }
+
+        #score {
+            text-align: left;
+        }
+
+        #title {
+            animation-name: colorChange;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes colorChange {
+            from {
+                transform: translateY(-10px) rotate(15deg);
+                color: red;
+            }
+
+            to {
+                transform: translateY(10px) rotate(-15deg);
+                color: blue;
+            }
+        }
+
+        button {
+            border: 4px outset orangered;
+            color: white;
+            background-color: orange;
+            font-weight: bold;
+        }
+
+        #a1,
+        #a2 {
+            border: 4px inset white;
+        }
+
+        button,
+        #a1,
+        #a2 {
+            width: 150px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, .4);
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="score">Score: 0</h1>
+        <h1 id="title">Riddle Master</h1>
+    </header>
+    <h3>1. What has to be broken before you can use it?</h3>
+    <input type="text" name="" id="a1">
+    <button onclick="q1()">Submit Answer</button><br><br>
+    <button onclick="h1()">Hint</button>
+    <h4>Result</h4>
+    <h4 id="r1"></h4>
+    <img id="i1" src="https://solidstarts.com/wp-content/uploads/when-can-babies-eat-eggs.jpg" alt="">
+
+    <h3>2. I’m tall when I’m young, and I’m short when I’m old. What am I?</h3>
+    <input type="text" name="" id="a2">
+    <button onclick="q2()">Submit Answer</button><br><br>
+    <button onclick="h2()">Hint</button>
+    <h4>Result</h4>
+    <h4 id="r2"></h4>
+    <img id="i2"
+        src="https://ii1.pepperfry.com/media/catalog/product/h/o/568x625/hosley-lavender-fields-highly-scented-6inch-pillar-candle-hosley-lavender-fields-highly-scented-6inc-qlqxtn.jpg"
+        alt="">
+
+</body>
+<script>
+    var score = 0;
+    function h1() {
+        document.getElementById("i1").style.display =
+            "inline-block";
+    }
+    function q1() {
+        var a1 = document.getElementById("a1").value;
+        if (a1.toUpperCase() == "EGG") {
+            document.getElementById("r1").innerText =
+                "correct answer";
+            score = score + 1;
+            document.getElementById("score").innerText =
+                "Score: " + score;
+        }
+        else {
+            document.getElementById("r1").innerText =
+                "wrong answer"
+        }
+    }
+
+    function h2() {
+        document.getElementById("i2").style.display =
+            "inline-block";
+    }
+    function q2() {
+        var a2 = document.getElementById("a2").value;
+        if (a2.toUpperCase() == "CANDLE") {
+            document.getElementById("r1").innerText =
+                "correct answer";
+            score = score + 1;
+            document.getElementById("score").innerText =
+                "Score: " + score;
+        }
+        else {
+            document.getElementById("r2").innerText =
+                "wrong answer"
+        }
+    }
+</script>
+
+</html>
